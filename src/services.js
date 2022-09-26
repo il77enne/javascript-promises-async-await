@@ -1,4 +1,3 @@
-import { result } from "lodash";
 
 export function fetchWithTimeout(delay) {
     return new Promise(resolve => setTimeout(resolve, delay));
@@ -22,9 +21,9 @@ export function fetchBooks() {
 
 export async function asyncFetchMovies() {
     try {
-        const response = await fetch("/data/movies.json")
+        const response = await fetch("./data/movies.json")
         const results = await response.json();
-        return result;
+        return results;
     } catch (error) {
         console.log(error);
     }
@@ -32,9 +31,9 @@ export async function asyncFetchMovies() {
 
 export async function asyncFetchBooks() {
     try {
-        const response = await fetch("/data/books.json")
+        const response = await fetch("./data/books.json")
         const results = await response.json();
-        return result;
+        return results;
     } catch (error) {
         console.log(error);
     }
